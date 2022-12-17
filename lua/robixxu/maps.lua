@@ -58,7 +58,7 @@ map("n", "N", "Nzzzv")
 
 
 -- visual paste fix 
-map("x", "<leader>p", "\"_dP")
+--map("x", "<leader>p", "\"_dP")
 
 -- don't do it
 map("n", "Q", "<nop>")

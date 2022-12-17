@@ -24,7 +24,7 @@ o.termguicolors = true
 -- o.background = 'dark'
 
 -- Time in ms for a mapped sequence to complete
-o.timeoutlen = 250
+o.timeoutlen = 500
 -- Time in ms for swap to be written to disk if nothing is being typed
 o.updatetime = 50
 opt.updatetime = 50
