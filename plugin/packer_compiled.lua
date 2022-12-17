@@ -215,6 +215,16 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -235,12 +245,12 @@ time([[Config for rose-pine]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd telescope.nvim ]]
+vim.cmd [[ packadd telescope-symbols.nvim ]]
 vim.cmd [[ packadd telescope-fzf-native.nvim ]]
 
 -- Config for: telescope-fzf-native.nvim
 try_loadstring("\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\bfzf\19load_extension\14telescope\frequire\0", "config", "telescope-fzf-native.nvim")
 
-vim.cmd [[ packadd telescope-symbols.nvim ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false

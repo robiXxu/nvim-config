@@ -15,6 +15,7 @@ lsp.ensure_installed({
   "ruby_ls",
   "marksman",
   "jsonls",
+  "sqlls",
 --  "solargraph",
 })
 

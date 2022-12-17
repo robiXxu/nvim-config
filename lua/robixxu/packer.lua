@@ -89,5 +89,9 @@ return require('packer').startup(function(use)
     }
   })
 
+  -- floating signature
   use("ray-x/lsp_signature.nvim")
+
+  -- db client
+  use({ 'kristijanhusak/vim-dadbod-ui', requires = { 'tpope/vim-dadbod' } })
 end)
