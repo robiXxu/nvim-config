@@ -62,5 +62,5 @@ lsp.on_attach(function(client, bufnr)
 
 
 end)
-
+lsp.nvim_workspace()
 lsp.setup()
