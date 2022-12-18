@@ -61,6 +61,7 @@ vim.keymap.set("n", "<leader>H", Telescope.help_tags)
 
 -- Fuzzy find active buffers
 vim.keymap.set("n", "'b", Telescope.buffers)
+vim.keymap.set("n", "'w", Telescope.grep_string)
 
 -- Search for string
 vim.keymap.set("n", "'r", Telescope.live_grep)
