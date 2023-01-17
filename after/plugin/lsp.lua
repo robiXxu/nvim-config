@@ -16,7 +16,7 @@ lsp.ensure_installed({
   "marksman",
   "jsonls",
   "sqlls",
---  "solargraph",
+  "solargraph",
 })
 
 
@@ -34,7 +34,7 @@ lsp.ensure_installed({
 -- })
 
 
-lsp.on_attach(function(client, bufnr)
+local on_attach = function(client, bufnr)
   local opts = {
     buffer = bufnr,
     remap = false
@@ -59,8 +59,22 @@ lsp.on_attach(function(client, bufnr)
 
 	-- map('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 	map('n', '<leader>so', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], opts)
+end
 
 
-end)
+lsp.on_attach(on_attach)
 lsp.nvim_workspace()
-lsp.setup()
+lsp.setup({
+  flags = {
+    debounce_text_changes = 5,
+  }
+})
+
+-- vim.diagnostic.config({
+--   virtual_text = true,
+--   signs = true,
+--   update_in_insert = false,
+--   underline = true,
+--   severity_sort = false,
+--   float = true,
+-- })

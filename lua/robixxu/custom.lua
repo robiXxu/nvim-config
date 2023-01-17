@@ -32,3 +32,11 @@ vim.api.nvim_create_user_command("StartAuto", function()
   end, {})
 end, {})
 
+
+-- vim.o.autoread = true
+-- vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained", "BufWritePost" }, {
+--   pattern = "lua",
+--   callback = function()
+--   end
+-- })
+

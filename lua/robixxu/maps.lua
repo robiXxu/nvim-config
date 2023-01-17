@@ -45,7 +45,7 @@ map("t", "<C-l>", "<C-\\><C-n><C-w>l")
 -- Terminal
 map("", "<C-n><C-t>", "<ESC>:terminal<CR>")
 
-map("", "<leader>sv", "<cmd>:source $MYVIMRC<CR>")
+map("n", "<leader>sv", "<cmd>:source $MYVIMRC<CR>")
 
 
 -- visual move + auto indent

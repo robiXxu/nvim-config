@@ -55,7 +55,8 @@ dap.adapters.ruby = function(callback, config)
   callback {
     type = "server",
     host = "127.0.0.1",
-    port = "${port}",
+    port = "7000",
+    --port = "${port}",
     executable = {
       command = "bundle",
       args = { "exec", "rdbg", "-n", "--open", "--port", "${port}",
@@ -72,6 +73,9 @@ dap.configurations.ruby = {
     request = "attach",
     localfs = true,
     command = "ruby",
+    host = "127.0.0.1",
+    port = "7000",
+    cwd = vim.fn.getcwd(),
     script = "${file}",
   },
   {

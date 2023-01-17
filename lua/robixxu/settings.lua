@@ -5,15 +5,14 @@ local opt = vim.opt
 vim.cmd("syntax on")
 -- vim.cmd("colorscheme habamax")
 -- vim.cmd("hi! Normal ctermbg=NONE guibg=NONE")
-vim.cmd("filetype on")
+-- vim.cmd("filetype on")
 
---vim.cmd("au BufWritePost $HOME/.config/nvim/*.{lua} so $MYVIMRC")
---vim.cmd("filetype indent on")
-vim.cmd("filetype plugin on")
+-- vim.cmd("au BufWritePost $HOME/.config/nvim/*.{lua} so $MYVIMRC")
+-- vim.cmd("filetype plugin on")
 -- vim.cmd("set cc=120")
 
 -- if file was changed, read it again
-vim.opt.autoread = true
+o.autoread = true
 
 -- Disable mouse
 vim.opt.mouse = ""

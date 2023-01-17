@@ -230,6 +230,11 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vgit.nvim"] = {
+    loaded = true,
+    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vgit.nvim",
+    url = "https://github.com/tanvirtin/vgit.nvim"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-commentary",
