@@ -65,6 +65,7 @@ return require("packer").startup(function(use)
 
   -- easy comments
   use("tpope/vim-commentary")
+  -- use("tomtom/tcomment_vim")
 
   -- LSP & snippets
   use ({
@@ -89,13 +90,21 @@ return require("packer").startup(function(use)
     }
   })
 
+  use({ 'lewis6991/gitsigns.nvim', tag = 'release' })
+
   -- vgit
-  use {
-    'tanvirtin/vgit.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    }
-  }
+  -- use {
+  --   'tanvirtin/vgit.nvim',
+  --   requires = {
+  --     'nvim-lua/plenary.nvim'
+  --   }
+  -- }
+
+  -- use({
+  --   'akinsho/bufferline.nvim',
+  --   tag = "v3.*",
+  --   requires = 'nvim-tree/nvim-web-devicons'
+  -- })
 
   -- floating signature
   use("ray-x/lsp_signature.nvim")
