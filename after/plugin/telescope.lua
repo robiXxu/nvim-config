@@ -39,6 +39,8 @@ require("telescope").setup({
 	},
 })
 
+require("telescope").load_extension("git_worktree")
+
 local Telescope = setmetatable({}, {
 	__index = function(_, k)
 		if vim.bo.filetype == "NvimTree" then
@@ -69,3 +71,6 @@ vim.keymap.set("n", "'r", Telescope.live_grep)
 -- Fuzzy find changed files in git
 vim.keymap.set("n", "'c", Telescope.git_status)
 vim.keymap.set("n", "<leader>g", Telescope.git_commits)
+
+vim.keymap.set("n", "'gs", require("telescope").extensions.git_worktree.git_worktrees);
+vim.keymap.set("n", "'gc", require("telescope").extensions.git_worktree.create_git_worktree);

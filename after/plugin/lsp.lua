@@ -6,7 +6,6 @@ lsp.preset('recommended')
 lsp.ensure_installed({
   "tsserver",
   "eslint",
-  "sumneko_lua",
   "rust_analyzer",
   "gopls",
   "html",
@@ -40,6 +39,7 @@ local on_attach = function(client, bufnr)
     remap = false
   }
 
+
 	map("n", "gD", vim.lsp.buf.declaration, opts)
 	map("n", "gd", vim.lsp.buf.definition, opts)
 	map("n", "gh", vim.lsp.buf.hover, opts)
@@ -59,6 +59,8 @@ local on_attach = function(client, bufnr)
 
 	-- map('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 	map('n', '<leader>so', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], opts)
+
+  --lsp.buffer_autoformat()
 end
 
 
