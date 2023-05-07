@@ -2,6 +2,9 @@
 local o = vim.o
 local opt = vim.opt
 
+-- opt("o", "completeopt", "menuone,noinsert,noselect")
+vim.o.shortmess = string.gsub(vim.o.shortmess, 'F', '') .. "c"
+
 vim.cmd("syntax on")
 -- vim.cmd("colorscheme morning")
 -- vim.cmd("hi! Normal ctermbg=NONE guibg=NONE")

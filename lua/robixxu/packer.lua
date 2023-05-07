@@ -32,7 +32,6 @@ return require("packer").startup(function(use)
 		as = "rose-pine",
 		config = function()
 			vim.cmd("colorscheme rose-pine")
-			--vim.cmd("colorscheme morning")
 		end,
 	})
 
@@ -109,9 +108,9 @@ return require("packer").startup(function(use)
 		event = "InsertEnter",
 		config = function()
 			require("copilot").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
+				suggestion = { enabled = false },
+				panel = { enabled = false },
+			})
 		end,
 	})
 
@@ -150,6 +149,7 @@ return require("packer").startup(function(use)
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use({ "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } })
 	use({ "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
+	use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
 
 	--use({ 'suketa/nvim-dap-ruby', requires = {"mfussenegger/nvim-dap"} })
 	--use({ "leoluz/nvim-dap-go", requires = {"mfussenegger/nvim-dap"} })

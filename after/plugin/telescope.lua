@@ -50,11 +50,15 @@ local Telescope = setmetatable({}, {
 	end,
 })
 
+local opts = {
+  --cwd = vim.fn.expand("%:p:h")
+}
+
 -- Ctrl-p = fuzzy finder
 vim.keymap.set("n", "<C-P>", function()
 	local ok = pcall(Telescope.git_files, { show_untracked = true })
 	if not ok then
-		Telescope.find_files()
+		Telescope.find_files(opts)
 	end
 end)
 
@@ -62,14 +66,22 @@ end)
 vim.keymap.set("n", "<leader>H", Telescope.help_tags)
 
 -- Fuzzy find active buffers
-vim.keymap.set("n", "'b", Telescope.buffers)
-vim.keymap.set("n", "'w", Telescope.grep_string)
+vim.keymap.set("n", "'b", function()
+  Telescope.buffers(opts)
+end)
+vim.keymap.set("n", "'w", function()
+  Telescope.grep_string(opts)
+end)
 
 -- Search for string
-vim.keymap.set("n", "'r", Telescope.live_grep)
+vim.keymap.set("n", "'r", function()
+  Telescope.live_grep(opts)
+end)
 
 -- Fuzzy find changed files in git
-vim.keymap.set("n", "'c", Telescope.git_status)
+vim.keymap.set("n", "'c", function()
+  Telescope.git_status(opts)
+end)
 vim.keymap.set("n", "<leader>g", Telescope.git_commits)
 
 vim.keymap.set("n", "'gs", require("telescope").extensions.git_worktree.git_worktrees);

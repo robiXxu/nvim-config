@@ -44,7 +44,7 @@ end, {})
 
 vim.api.nvim_create_augroup("robixxu-autoformat", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
-	-- pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	callback = function()
 		vim.cmd("silent Neoformat")
 	end,
