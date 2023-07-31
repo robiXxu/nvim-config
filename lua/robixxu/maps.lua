@@ -66,6 +66,13 @@ map("n", "Q", "<nop>")
 -- fast replace word under cursor
 map("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
+map('n', '<leader>aa', '<cmd>ArduinoAttach<CR>')
+map('n', '<leader>av', '<cmd>ArduinoVerify<CR>')
+map('n', '<leader>au', '<cmd>ArduinoUpload<CR>')
+map('n', '<leader>aus', '<cmd>ArduinoUploadAndSerial<CR>')
+map('n', '<leader>as', '<cmd>ArduinoSerial<CR>')
+map('n', '<leader>ab', '<cmd>ArduinoChooseBoard<CR>')
+map('n', '<leader>ap', '<cmd>ArduinoChooseProgrammer<CR>')
 
 
 -- map("i","<C-CR>", require("copilot").accept())

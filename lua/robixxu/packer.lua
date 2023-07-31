@@ -27,13 +27,13 @@ return require("packer").startup(function(use)
 	})
 
 	-- Theme
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
-	})
+	-- use({
+	-- 	"rose-pine/neovim",
+	-- 	as = "rose-pine",
+	-- 	config = function()
+	-- 		-- vim.cmd("colorscheme rose-pine")
+	-- 	end,
+	-- })
 
 	-- LuaLine
 	use({
@@ -124,6 +124,8 @@ return require("packer").startup(function(use)
 
 	use({ "lewis6991/gitsigns.nvim", tag = "release" })
 	use({ "ThePrimeagen/git-worktree.nvim" })
+
+	use({ "stevearc/vim-arduino" })
 
 	-- vgit
 	-- use {

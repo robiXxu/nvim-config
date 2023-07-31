@@ -56,7 +56,7 @@ local opts = {
 
 -- Ctrl-p = fuzzy finder
 vim.keymap.set("n", "<C-P>", function()
-	local ok = pcall(Telescope.git_files, { show_untracked = true })
+	local ok = pcall(Telescope.find_files, { show_untracked = true })
 	if not ok then
 		Telescope.find_files(opts)
 	end
@@ -64,6 +64,8 @@ end)
 
 -- Get :help at the speed of light
 vim.keymap.set("n", "<leader>H", Telescope.help_tags)
+
+-- vim.keymap.set("n", "<leader>q", Telescope.)
 
 -- Fuzzy find active buffers
 vim.keymap.set("n", "'b", function()

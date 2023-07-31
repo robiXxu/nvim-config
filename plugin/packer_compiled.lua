@@ -277,6 +277,11 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-arduino"] = {
+    loaded = true,
+    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-arduino",
+    url = "https://github.com/stevearc/vim-arduino"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-commentary",

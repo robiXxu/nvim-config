@@ -7,6 +7,7 @@ vim.o.shortmess = string.gsub(vim.o.shortmess, 'F', '') .. "c"
 
 vim.cmd("syntax on")
 -- vim.cmd("colorscheme morning")
+vim.cmd("colorscheme desert")
 -- vim.cmd("hi! Normal ctermbg=NONE guibg=NONE")
 -- vim.cmd("filetype on")
 
