@@ -51,4 +51,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	group = "robixxu-autoformat",
 })
 
-

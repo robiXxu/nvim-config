@@ -6,8 +6,9 @@ local opt = vim.opt
 vim.o.shortmess = string.gsub(vim.o.shortmess, 'F', '') .. "c"
 
 vim.cmd("syntax on")
+
 -- vim.cmd("colorscheme morning")
-vim.cmd("colorscheme desert")
+-- vim.cmd("colorscheme desert")
 -- vim.cmd("hi! Normal ctermbg=NONE guibg=NONE")
 -- vim.cmd("filetype on")
 
@@ -23,8 +24,8 @@ vim.opt.mouse = ""
 vim.cmd("set mouse-=a")
 
 -- Theme & colors
-o.termguicolors = true
-o.background = 'dark'
+-- o.termguicolors = true
+-- o.background = 'dark'
 
 -- Time in ms for a mapped sequence to complete
 o.timeoutlen = 500

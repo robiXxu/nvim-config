@@ -26,14 +26,21 @@ return require("packer").startup(function(use)
 		},
 	})
 
+	-- use('mrjones2014/smart-splits.nvim')
+	-- -- or use a specific version
+	-- use({ 'mrjones2014/smart-splits.nvim', tag = 'v1.0.0' })
+	-- -- -- to use Kitty multiplexer support, run the post install hook
+	-- -- use({ 'mrjones2014/smart-splits.nvim', run = './kitty/install-kittens.bash' })
+
 	-- Theme
-	-- use({
-	-- 	"rose-pine/neovim",
-	-- 	as = "rose-pine",
-	-- 	config = function()
-	-- 		-- vim.cmd("colorscheme rose-pine")
-	-- 	end,
-	-- })
+	use("marko-cerovac/material.nvim")
+
+	use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
+	use({
+		"microsoft/vscode-js-debug",
+		opt = true,
+		run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+	})
 
 	-- LuaLine
 	use({
@@ -80,6 +87,7 @@ return require("packer").startup(function(use)
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
+      { "lvimuser/lsp-inlayhints.nvim" },
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
@@ -102,25 +110,25 @@ return require("packer").startup(function(use)
 	use("sbdchd/neoformat")
 
 	--use("github/copilot.vim")
-	use({
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				suggestion = { enabled = false },
-				panel = { enabled = false },
-			})
-		end,
-	})
+	-- use({
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	cmd = "Copilot",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("copilot").setup({
+	-- 			suggestion = { enabled = false },
+	-- 			panel = { enabled = false },
+	-- 		})
+	-- 	end,
+	-- })
 
-	use({
-		"zbirenbaum/copilot-cmp",
-		after = { "copilot.lua" },
-		config = function()
-			require("copilot_cmp").setup()
-		end,
-	})
+	-- use({
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	after = { "copilot.lua" },
+	-- 	config = function()
+	-- 		require("copilot_cmp").setup()
+	-- 	end,
+	-- })
 
 	use({ "lewis6991/gitsigns.nvim", tag = "release" })
 	use({ "ThePrimeagen/git-worktree.nvim" })
@@ -151,6 +159,11 @@ return require("packer").startup(function(use)
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use({ "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } })
 	use({ "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
+
+	use({ "suketa/nvim-dap-ruby", requires = { "mfussenegger/nvim-dap" } })
+	-- This was supposed to allow per project configuration. doesn't seem to work
+	-- use({ 'ldelossa/nvim-dap-projects', requires = { "mfussenegger/nvim-dap" }})
+
 	use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
 
 	--use({ 'suketa/nvim-dap-ruby', requires = {"mfussenegger/nvim-dap"} })
