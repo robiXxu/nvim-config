@@ -308,7 +308,7 @@ lsp.on_attach(on_attach)
 lsp.nvim_workspace()
 lsp.setup({
 	flags = {
-		debounce_text_changes = 5,
+		debounce_text_changes = 3,
 	},
 })
 

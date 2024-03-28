@@ -35,6 +35,13 @@ return require("packer").startup(function(use)
 	-- Theme
 	use("marko-cerovac/material.nvim")
 
+	use({
+		"aserowy/tmux.nvim",
+		config = function()
+			return require("tmux").setup()
+		end,
+	})
+
 	use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
 	use({
 		"microsoft/vscode-js-debug",
@@ -87,7 +94,7 @@ return require("packer").startup(function(use)
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
-      { "lvimuser/lsp-inlayhints.nvim" },
+			{ "lvimuser/lsp-inlayhints.nvim" },
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
@@ -156,7 +163,7 @@ return require("packer").startup(function(use)
 	use({ "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod" } })
 
 	-- debugging
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 	use({ "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } })
 	use({ "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
 

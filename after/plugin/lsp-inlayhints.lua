@@ -20,23 +20,33 @@ lspconfig.lua_ls.setup({
 		},
 	},
 })
+require("lsp-inlayhints.adapter").set_old_tsserver()
 
--- lspconfig.tsserver.setup({
--- 	on_attach = function(client, bufnr)
--- 		ih.on_attach(client, bufnr)
--- 	end,
--- 	settings = {
--- 		init_options = {
--- 			preferences = {
--- 				includeInlayParameterNameHints = "all",
--- 				includeInlayParameterNameHintsWhenArgumentMatchesName = true,
--- 				includeInlayFunctionParameterTypeHints = true,
--- 				includeInlayVariableTypeHints = true,
--- 				includeInlayPropertyDeclarationTypeHints = true,
--- 				includeInlayFunctionLikeReturnTypeHints = true,
--- 				includeInlayEnumMemberValueHints = true,
--- 				importModuleSpecifierPreference = "non-relative",
--- 			},
--- 		},
--- 	},
--- })
+lspconfig.tsserver.setup({
+  settings = {
+    typescript = {
+      inlayHints = {
+        includeInlayParameterNameHints = 'all',
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+        includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayEnumMemberValueHints = true,
+      }
+    },
+    javascript = {
+      inlayHints = {
+        includeInlayParameterNameHints = 'all',
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+        includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayEnumMemberValueHints = true,
+      }
+    }
+  }
+})
