@@ -4,7 +4,7 @@ local finders = require("telescope.builtin")
 
 require("telescope").setup({
 	defaults = {
-    layout_strategy = 'vertical',
+		layout_strategy = "vertical",
 		file_ignore_patterns = {
 			"node_modules",
 			"vendor",
@@ -52,7 +52,7 @@ local Telescope = setmetatable({}, {
 })
 
 local opts = {
-  --cwd = vim.fn.expand("%:p:h")
+	--cwd = vim.fn.expand("%:p:h")
 }
 
 -- Ctrl-p = fuzzy finder
@@ -70,22 +70,22 @@ vim.keymap.set("n", "<leader>H", Telescope.help_tags)
 
 -- Fuzzy find active buffers
 vim.keymap.set("n", "'b", function()
-  Telescope.buffers(opts)
+	Telescope.buffers(opts)
 end)
 vim.keymap.set("n", "'w", function()
-  Telescope.grep_string(opts)
+	Telescope.grep_string(opts)
 end)
 
 -- Search for string
 vim.keymap.set("n", "'r", function()
-  Telescope.live_grep(opts)
+	Telescope.live_grep(opts)
 end)
 
 -- Fuzzy find changed files in git
 vim.keymap.set("n", "'c", function()
-  Telescope.git_status(opts)
+	Telescope.git_status(opts)
 end)
 vim.keymap.set("n", "<leader>g", Telescope.git_commits)
 
-vim.keymap.set("n", "'gs", require("telescope").extensions.git_worktree.git_worktrees);
-vim.keymap.set("n", "'gc", require("telescope").extensions.git_worktree.create_git_worktree);
+vim.keymap.set("n", "'gs", require("telescope").extensions.git_worktree.git_worktrees)
+vim.keymap.set("n", "'gc", require("telescope").extensions.git_worktree.create_git_worktree)

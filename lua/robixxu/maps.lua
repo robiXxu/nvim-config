@@ -80,6 +80,7 @@ map('n', '<leader>as', '<cmd>ArduinoSerial<CR>')
 map('n', '<leader>ab', '<cmd>ArduinoChooseBoard<CR>')
 map('n', '<leader>ap', '<cmd>ArduinoChooseProgrammer<CR>')
 
+map("n", "<leader>lg", "<cmd>LazyGit<CR>")
 
 -- map("i","<C-CR>", require("copilot").accept())
 -- vim.opt_global.copilot_no_tab_map = true

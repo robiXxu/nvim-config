@@ -25,6 +25,12 @@ return require("packer").startup(function(use)
 			after = "telescope.nvim",
 		},
 	})
+	-- use({
+	-- 	"ecthelionvi/NeoComposer.nvim",
+	-- 	requires = { "kkharji/sqlite.lua" },
+	-- })
+
+	use("voldikss/vim-floaterm")
 
 	-- use('mrjones2014/smart-splits.nvim')
 	-- -- or use a specific version
@@ -42,12 +48,12 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
-	use({
-		"microsoft/vscode-js-debug",
-		opt = true,
-		run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
-	})
+	-- use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
+	-- use({
+	-- 	"microsoft/vscode-js-debug",
+	-- 	opt = true,
+	-- 	run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+	-- })
 
 	-- LuaLine
 	use({
@@ -89,6 +95,8 @@ return require("packer").startup(function(use)
 	-- easy comments
 	use("tpope/vim-commentary")
 	-- use("tomtom/tcomment_vim")
+
+	use("simrat39/rust-tools.nvim")
 
 	-- LSP & snippets
 	use({
@@ -138,9 +146,16 @@ return require("packer").startup(function(use)
 	-- })
 
 	use({ "lewis6991/gitsigns.nvim", tag = "release" })
+	use({
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 	use({ "ThePrimeagen/git-worktree.nvim" })
 
-	use({ "stevearc/vim-arduino" })
+	-- use({ "stevearc/vim-arduino" })
 
 	-- vgit
 	-- use {
@@ -163,16 +178,17 @@ return require("packer").startup(function(use)
 	use({ "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod" } })
 
 	-- debugging
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
-	use({ "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } })
-	use({ "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
+	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
+	-- use({ "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } })
+	-- use({ "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
+	-- use({ "jay-babu/mason-nvim-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
 
-	use({ "suketa/nvim-dap-ruby", requires = { "mfussenegger/nvim-dap" } })
-	-- This was supposed to allow per project configuration. doesn't seem to work
-	-- use({ 'ldelossa/nvim-dap-projects', requires = { "mfussenegger/nvim-dap" }})
+	-- use({ "suketa/nvim-dap-ruby", requires = { "mfussenegger/nvim-dap" } })
+	-- -- :This was supposed to allow per project configuration. doesn't seem to work
+	-- -- use({ 'ldelossa/nvim-dap-projects', requires = { "mfussenegger/nvim-dap" }})
 
-	use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
+	-- use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
 
-	--use({ 'suketa/nvim-dap-ruby', requires = {"mfussenegger/nvim-dap"} })
-	--use({ "leoluz/nvim-dap-go", requires = {"mfussenegger/nvim-dap"} })
+	-- use({ 'suketa/nvim-dap-ruby', requires = {"mfussenegger/nvim-dap"} })
+	-- use({ "leoluz/nvim-dap-go", requires = {"mfussenegger/nvim-dap"} })
 end)

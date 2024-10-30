@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?.lua;/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?/init.lua;/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?.lua;/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/robixxu/.cache/nvim/packer_hererocks/2.1.1727870382/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lsp-inlayhints.nvim"] = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
@@ -181,45 +186,10 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-ruby"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-dap-ruby",
-    url = "https://github.com/suketa/nvim-dap-ruby"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-dap-virtual-text"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
-    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
-  },
-  ["nvim-dap-vscode-js"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
-    url = "https://github.com/mxsdev/nvim-dap-vscode-js"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-metals"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-metals",
-    url = "https://github.com/scalameta/nvim-metals"
-  },
-  ["nvim-nio"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/nvim-nio",
-    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -246,10 +216,10 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["telescope-dap.nvim"] = {
+  ["rust-tools.nvim"] = {
     loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
-    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
+    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     config = { "\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\bfzf\19load_extension\14telescope\frequire\0" },
@@ -282,11 +252,6 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
-  ["vim-arduino"] = {
-    loaded = true,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-arduino",
-    url = "https://github.com/stevearc/vim-arduino"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-commentary",
@@ -302,6 +267,11 @@ _G.packer_plugins = {
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
     url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -311,12 +281,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/robixxu/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["vscode-js-debug"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/Users/robixxu/.local/share/nvim/site/pack/packer/opt/vscode-js-debug",
-    url = "https://github.com/microsoft/vscode-js-debug"
   }
 }
 
@@ -332,12 +296,12 @@ time([[Config for tmux.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd telescope.nvim ]]
+vim.cmd [[ packadd telescope-symbols.nvim ]]
 vim.cmd [[ packadd telescope-fzf-native.nvim ]]
 
 -- Config for: telescope-fzf-native.nvim
 try_loadstring("\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\bfzf\19load_extension\14telescope\frequire\0", "config", "telescope-fzf-native.nvim")
 
-vim.cmd [[ packadd telescope-symbols.nvim ]]
 time([[Sequenced loading]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
